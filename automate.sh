@@ -3,8 +3,8 @@
 #We can use same command for Evicted Pending too when it required
 kubectl get po --all-namespaces --field-selector 'status.phase==Failed' -o json | kubectl delete -f - >/dev/null
 
-# hard coded all the names since we dont change the app and label names apart from versions
-# Still if we want dynamic we can use Varibles
+# hard coded all the names since we dont change the app names etc apart from versions
+# Still if we want dynamic we can use Varibles to pass from Jenkins Server
 
 APPS_ALL="database database-service nodejsapp nodejs-service redis redis-service"
 YAML_FILES="mysql mysql-service nodejs redis nodejs-service"

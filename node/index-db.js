@@ -1,6 +1,8 @@
 module.exports = require("./lib/redis");
 var express = require('express');
 var app = express();
+let redis = require('redis')
+let client = redis.createClient()
 var mysql = require("mysql");
 var con = mysql.createConnection({ host: process.env.MYSQL_HOST, user: process.env.MYSQL_USER, password: process.env.MYSQL_PASSWORD, database: process.env.MYSQL_DATABASE});
 

@@ -1,3 +1,4 @@
+module.exports = require("./lib/redis");
 var express = require('express');
 var app = express();
 var mysql = require("mysql");
